@@ -1,5 +1,6 @@
 package pl.sda.springbootvaadinb;
 
+import com.vaadin.flow.component.applayout.AppLayoutMenuItem;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -17,8 +18,14 @@ public class CatGui extends VerticalLayout {
         String catGif = catGifClient.getCatGifFormApi();
         String catImage = catImageClient.getCatImageFormApi();
 
+        AppLayoutMenuItem appLayoutMenuItem = new AppLayoutMenuItem("Kotek");
+        add(appLayoutMenuItem);
+
         Label labelCat = new Label(catFactClient.getCatFactFormApi().getText());
         add(labelCat);
+
+        Label labelEmpty3 = new Label("KOCHAM PAULINĘ");
+        add(labelEmpty3);
 
         Label labelEmpty = new Label("Fajny Gif");
         add(labelEmpty);

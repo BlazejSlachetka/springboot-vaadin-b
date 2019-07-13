@@ -14,7 +14,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/cat").authenticated()
                 .antMatchers("/hello").permitAll()
                 .and()
-                //blokujemy dostep do sprawdzania nieautoryzowanego dostępu
                 .csrf().disable();
     }
 }
